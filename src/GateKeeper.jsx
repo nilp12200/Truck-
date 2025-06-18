@@ -588,9 +588,10 @@ function GateKeeper() {
     }
   };
 
-  const handleCheckedInClick = (truckNo) => {
-    setFormData(prev => ({ ...prev, truckNo }));
-  };
+const handleCheckedInClick = (truckNo) => {
+  handleTruckSelect(truckNo); // fetch remarks too
+};
+
 
   const handleSubmit = async (type) => {
     const { truckNo } = formData;
